@@ -1,0 +1,113 @@
+@Metadata.layer: #CORE
+@UI: {
+    headerInfo: {
+        typeName: 'Asset',
+        typeNamePlural: 'Assets'
+    }
+}
+annotate view YAB_AA_DDL_CBATCH
+    with 
+{   
+    @UI:{ 
+        lineItem: [{ label: 'Company Code', position: 10, importance: #HIGH }],
+        identification: [{ label: 'Company Code', position: 10 }],
+        selectionField: [{ position: 10 }]
+         }
+    company_code;
+
+    @UI:{ 
+        lineItem: [{ label: 'Asset Class', position: 20, importance: #HIGH }],
+        identification: [{ label: 'Asset Class', position: 20 }],
+        selectionField: [{ position: 20 }] }
+    asset_class;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Asset Number', position: 30, importance: #HIGH }],
+        identification: [{ label: 'Asset Number', position: 30 }],
+        selectionField: [{ position: 30}] }
+    asset_number;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Asset Sub Number', position: 40, importance: #HIGH }],
+        identification: [{ label: 'Asset Sub Number', position: 40 }],
+        selectionField: [{ position: 40 }] }
+    asset_subnumber;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Asset Description', position: 50, importance: #MEDIUM }],
+        identification: [{ label: 'Asset Description', position: 50 }] }
+    asset_description;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Serial Number', position: 60, importance: #MEDIUM }],
+        identification: [{ label: 'Serial Number', position: 60 }],
+        selectionField: [{ position: 80 }] }
+    serial_number;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Inventory Number', position: 70, importance: #MEDIUM }],
+        identification: [{ label: 'Inventory Number', position: 70 }],
+        selectionField: [{ position: 90 }] }
+    inventory_number;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Inventory Note', position: 80, importance: #MEDIUM }],
+        identification: [{ label: 'Inventory Note', position: 80 }] }
+    inventory_note;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Deactivation On', position: 90, importance: #MEDIUM }],
+        identification: [{ label: 'Deactivation On', position: 90 }] }
+    deactivation_on;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Cost Center', position: 100, importance: #MEDIUM }],
+        identification: [{ label: 'Cost Center', position: 100 }],
+        selectionField: [{ position: 50 }] }
+    cost_center;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Plant', position: 110, importance: #MEDIUM }],
+        identification: [{ label: 'Plant', position: 110 }],
+        selectionField: [{ position: 60 }] }
+    plant;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Location', position: 120, importance: #MEDIUM }],
+        identification: [{ label: 'Location', position: 120 }],
+        selectionField: [{ position: 70 }] }
+    location;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Functional Area', position: 130, importance: #MEDIUM }],
+        identification: [{ label: 'Functional Area', position: 130 }] }
+    functional_area;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Asset Created Date', position: 140, importance: #MEDIUM }],
+        identification: [{ label: 'Asset Created Date', position: 140 }],
+        selectionField: [{ position: 110 }]}
+    @Consumption.filter.selectionType: #INTERVAL    
+    asset_created_date;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Last Inventory Date', position: 150, importance: #MEDIUM }],
+        identification: [{ label: 'Last Inventory Date', position: 150 }],
+        selectionField: [{ position: 130 }] }
+    @Consumption.filter.selectionType: #INTERVAL 
+    last_inventory_date;
+    
+    @UI:{ 
+        lineItem: [{ label: 'Capitalized Date', position: 160, importance: #MEDIUM }],
+        identification: [{ label: 'Capitalized Date', position: 160 }],
+        selectionField: [{ position: 120 }] }
+    @Consumption.filter.selectionType: #INTERVAL 
+    capitalized_date;
+
+    
+    @UI:{
+        lineItem: [{ label: 'Asset Tag Indicator',position: 170, importance: #MEDIUM}],
+        identification: [{ label: 'Asset Tag Indicator', position: 170 }],
+        selectionField:[{ position:140 }]}
+    asset_tag_indicator;
+}
